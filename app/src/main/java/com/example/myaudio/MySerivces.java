@@ -8,10 +8,6 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.provider.MediaStore;
 
-/**
- * Created by zth on 2018/3/28.
- */
-
 public class MySerivces extends Service {
     String[] mCursorCols = new String[] {
           //  "audio._id AS _id", // index must match IDCOLIDX below
@@ -57,7 +53,6 @@ public class MySerivces extends Service {
     }
 
 
-
         // 播放音乐
      public void play() {
             //初始化音乐播放器
@@ -81,10 +76,6 @@ public class MySerivces extends Service {
             mMediaPlayer.prepare();
             // 播放
             mMediaPlayer.start();
-        } catch (IllegalArgumentException e1) {
-            e1.printStackTrace();
-        } catch (IllegalStateException e1) {
-            e1.printStackTrace();
         } catch (Exception e1) {
             e1.printStackTrace();
         }
